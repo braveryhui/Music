@@ -7,12 +7,18 @@
 //
 /****
 未解决的问题，
+<<<<<<< HEAD
  歌词和歌曲时间不一样长的时候会崩溃
  其实是歌词解析的问题 
  有兴趣的朋友求解决
  有兴趣的朋友写个歌词解析的函数
  或者有同样的类似的demo
  求发送braveryhui@gmail.com
+=======
+ 选中播放上一首下一首的bug
+ 歌词和歌曲时间不一样长的时候会崩溃
+ 歌词居中
+>>>>>>> cbe67cf3c1391eac03a34256938b221a44195c8c
  ***/
 
 #import "MusicViewController.h"
@@ -39,6 +45,10 @@
         currentMusicKey =0;
         AudioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:currentMusic.name ofType:currentMusic.type]] error:nil];
     }else{
+<<<<<<< HEAD
+=======
+         NSLog(@"initData MusicArray =%u",[MusicArray indexOfObject:currentMusic]);
+>>>>>>> cbe67cf3c1391eac03a34256938b221a44195c8c
         AudioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:AgainMusic.name ofType:AgainMusic.type]] error:nil];
     }
    
@@ -202,10 +212,17 @@
 - (IBAction)above:(id)sender {
     //[AudioPlayer release];
     //NSLog(@"abc :%d",123);
+<<<<<<< HEAD
     //NSLog(@"abovekey=%d",currentMusicKey);
 //    for (int i=0; i<[MusicArray count]; i++) {
 //        NSLog(@"blowoutputmusicarray:%@",[MusicArray objectAtIndex:i]);
 //    }
+=======
+    NSLog(@"abovekey=%d",currentMusicKey);
+    for (int i=0; i<[MusicArray count]; i++) {
+        NSLog(@"blowoutputmusicarray:%@",[MusicArray objectAtIndex:i]);
+    }
+>>>>>>> cbe67cf3c1391eac03a34256938b221a44195c8c
     
     if(currentMusicKey!=0)
     {
@@ -222,7 +239,11 @@
 
 - (IBAction)blow:(id)sender {
 
+<<<<<<< HEAD
     //NSLog(@"%d",currentMusicKey);
+=======
+    NSLog(@"%d",currentMusicKey);
+>>>>>>> cbe67cf3c1391eac03a34256938b221a44195c8c
     
     if(currentMusicKey<[MusicArray count]-1)
     {
@@ -304,6 +325,10 @@
         cell.textLabel.text = music.name;
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.backgroundColor = [UIColor yellowColor];
+<<<<<<< HEAD
+=======
+        //cell.selectionStyle=UITableViewCellSelectionStyleNone;
+>>>>>>> cbe67cf3c1391eac03a34256938b221a44195c8c
         cell.selectedBackgroundView = [[UIView alloc]initWithFrame:cell.frame];
         cell.selectedBackgroundView.backgroundColor=[UIColor orangeColor];        
         return cell;
